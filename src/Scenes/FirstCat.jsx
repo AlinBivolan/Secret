@@ -40,18 +40,14 @@ const FirstCat = () => {
   };
 
   const handleEggClick = () => {
-    setClickCount(prevCount => {
-      const newCount = prevCount + 1;
-      if (newCount === 5) {
-        if (eggStage < 4) {
-          setEggStage(eggStage + 1);
-        } else {
-          setEggVisible(false);
-          setQuestionVisible(true); // Arată întrebarea când pisica apare
-        }
-        return 0;
+    setEggStage(prevStage => {
+      const newStage = prevStage + 1;
+      if (newStage === 5) {
+        setEggVisible(false);
+        setQuestionVisible(true); // Arată întrebarea când pisica apare
+        return prevStage;
       }
-      return newCount;
+      return newStage;
     });
   };
 
