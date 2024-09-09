@@ -18,7 +18,6 @@ const FirstCat = () => {
   const [thirdButtonVisible, setThirdButtonVisible] = useState(false);
   const [eggVisible, setEggVisible] = useState(false);
   const [eggStage, setEggStage] = useState(0);
-  const [clickCount, setClickCount] = useState(0);
   const [questionVisible, setQuestionVisible] = useState(false); // Control pentru întrebarea finală
   const [noButtonPosition, setNoButtonPosition] = useState({ top: '120%', left: '30%' }); // Poziția butonului "Nu"
   const [showGif, setShowGif] = useState(false); // Control pentru a afișa GIF-ul
