@@ -1,0 +1,157 @@
+
+/* Elimină scroll-ul și forțează dimensiunea pe întregul viewport */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Ascunde scroll-ul */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aliniază butonul sus */
+  height: 100vh; /* Forțează containerul să ocupe întreaga înălțime a ecranului */
+  padding-top: 50px; /* Mic spațiu față de partea de sus */
+  position: relative;
+}
+
+/* Stiluri pentru buton */
+.button-start{
+  background-color: #ffb6c1;
+  color: white;
+  padding: 12px 24px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 200px;
+}
+
+.button {
+  background-color: #ffb6c1;
+  color: white;
+  padding: 12px 24px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #ff69b4;
+  transform: scale(1.1);
+}
+
+/* Stiluri pentru balonul de vorbire */
+.speech-bubble {
+  position: absolute;
+  bottom: 100%; /* Poziționează balonul deasupra imaginii */
+  right: 10px;
+  background-color: #ffeb3b;
+  border: 2px solid #fbc02d;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Container pentru prima imagine */
+.image-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+/* Stil pentru prima imagine */
+.cat-image {
+  width: 500px;
+  height: auto;
+}
+
+/* Container pentru a doua imagine */
+.second-image-container {
+  position: fixed;
+  bottom: 10px;
+  left: 10%;
+  transform: translateX(-50%); /* Centrează imaginea pe orizontală */
+}
+
+/* Stil pentru a doua imagine */
+.second-cat-image {
+  width: 500px;
+  height: auto;
+}
+
+/* Media query pentru ecrane mici */
+@media (max-width: 600px) {
+  .button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+
+  .cat-image,
+  .second-cat-image {
+    width: 300px;
+  }
+
+  .container {
+    padding-top: 20px;
+  }
+}
+
+.egg-image {
+  width: 400px;
+  height: auto;
+}
+.final-question-container {
+  position: relative;
+  margin-top: 50px;
+}
+
+.final-gif {
+  width: 300px;
+  height: auto;
+}
+
+.button-final {
+  background-color: #ffb6c1;
+  color: white;
+  padding: 12px 24px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.question-style-1{
+  color: white;
+  font-size: 20px;
+  margin-bottom: 30px;
+  width: 300px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.question-style {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.cat-final{
+  width: 200px;
+  position: absolute;
+  left: 20px;
+  top: 250px;
+}
